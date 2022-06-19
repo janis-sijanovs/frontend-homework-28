@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'codelex-md-26';
+  title = 'Rick And Morty App';
+
+  show: "characters" | "locations" = "characters";
+
+  setShow(newValue: "characters" | "locations") {
+    this.show = newValue;
+  }
 }

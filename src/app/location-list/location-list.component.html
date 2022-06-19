@@ -1,0 +1,16 @@
+<label>Name: <input [(ngModel)]="search" (input)="reloadPage()" type="text"></label>
+<label>Dimension: <input [(ngModel)]="dimension" (input)="reloadPage()" type="text"></label>
+
+<div *ngIf="loading" class="loading">Loading...</div>
+
+<div *ngIf="locations" class="list">
+    <div *ngFor="let location of locations">
+        <app-location [location]="location"></app-location>
+    </div>
+</div>
+
+<button *ngIf="previous" (click)="changePage(-1)">Previous</button>
+Page {{page}}
+<button *ngIf="next" (click)="changePage(1)">Next</button>
+
+<p *ngIf="error">{{error}}</p>
