@@ -1,13 +1,13 @@
 <div class="app">
-  <nav>
-    <button (click)="setShow('characters')">Characters</button> |
-    <button (click)="setShow('locations')">Locations</button>
+  <nav class="navigation">
+    <button class="link" (click)="setShow('characters')">Characters</button> |
+    <button class="link" (click)="setShow('locations')">Locations</button>
   </nav>
 
   <div *ngIf="show === 'characters'">
-    <app-character-list></app-character-list>
+    <app-character-list class="app"></app-character-list>
   </div>
   <div *ngIf="show === 'locations'">
-    <app-location-list></app-location-list>
+    <app-location-list class="app"></app-location-list>
   </div>
 </div>
